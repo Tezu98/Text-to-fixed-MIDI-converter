@@ -11,7 +11,7 @@ public class Convert implements JMC {
 			System.out.println("");
 			System.out.println("1. Stwórz plik MIDI poprzez podanie ci¹gu znaków");
 			System.out.println("2. Odczytaj plik midi poprzez podanie nazwy pliku");
-			System.out.println("3. Odczytaj plik .mid");
+			System.out.println("3. Poka¿ plik .mid");
 			System.out.println("4. Wyjdz");
 			i = reader.nextInt();
 			switch (i) {
