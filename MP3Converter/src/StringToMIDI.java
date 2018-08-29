@@ -75,6 +75,5 @@ public class StringToMIDI {
 		for (int i = 0; i < ph.getNoteArray().length; i++) {
 			System.out.print(chars.get(ph.getNote(i).getPitch()));
 		}
-
 	}
 }

@@ -34,5 +34,4 @@ public class Convert implements JMC {
 
 		} while (i != 4);
 	}
-
 }
