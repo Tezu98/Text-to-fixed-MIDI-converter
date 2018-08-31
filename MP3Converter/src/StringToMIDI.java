@@ -12,7 +12,7 @@ import jm.util.View;
 import jm.util.Write;
 
 public class StringToMIDI {
-	private static Scanner reader = new Scanner(System.in);
+	private Scanner reader = new Scanner(System.in);
 	private static char[] alphabet = "abcdefghijklmnoprstuwvxyzq1234567890., !?/-".toCharArray();
 	private static HashMap<Character, Note> notes = new HashMap<Character, Note>();
 	private static HashMap<Integer, Character> chars = new HashMap<Integer, Character>();
@@ -22,7 +22,7 @@ public class StringToMIDI {
 			Pitches.G3, Pitches.GS3, Pitches.A3, Pitches.AS3, Pitches.B3, Pitches.C4, Pitches.CS4, Pitches.D4,
 			Pitches.DS4, Pitches.E4, Pitches.F4, Pitches.FS4, Pitches.G4, Pitches.GS4, Pitches.A4, Pitches.AS4,
 			Pitches.B4, Pitches.C5, Pitches.CS5, Pitches.D5, Pitches.DS5};
-	private static double d = Durations.Q;
+	private static final double d = Durations.Q;
 
 	static {
 		for (int i = 0; i < pitch.length; i++) {
@@ -32,11 +32,11 @@ public class StringToMIDI {
 		}
 	}
 
-	public static void toMIDI() {
-		System.out.print("Podaj Nazwê plikuj: ");
+	public void toMIDI() {
+		System.out.print("File name: ");
 		if (reader.hasNextLine()) {
 			String fileName = reader.nextLine();
-			System.out.print("Podaj ci¹g znaków: ");
+			System.out.print("Give a string of characters: ");
 			Phrase phr = new Phrase();
 			Part p = new Part();
 			Score s = new Score();
@@ -52,8 +52,8 @@ public class StringToMIDI {
 		}
 	}
 
-	public static void showMIDI() {
-		System.out.print("Podaj Nazwê pliku: ");
+	public void showMIDI() {
+		System.out.print("File name: ");
 		String fileName = reader.nextLine();
 
 		Score s = new Score(fileName);
@@ -61,9 +61,9 @@ public class StringToMIDI {
 		View.show(s);
 	}
 
-	public static void toLine() {
+	public void toLine() {
 
-		System.out.print("Podaj Nazwê pliku: ");
+		System.out.print("File name: ");
 		String fileName = reader.nextLine();
 		Part p = new Part();
 		Phrase ph = new Phrase(0.0);

@@ -4,31 +4,32 @@ import jm.JMC;
 
 public class Convert implements JMC {
 	static Scanner reader = new Scanner(System.in);
+	static StringToMIDI stm = new StringToMIDI();
 	static int i;
 
 	public static void main(String[] args) {
 		do {
-			System.out.println("");
-			System.out.println("1. Stwórz plik MIDI poprzez podanie ci¹gu znaków");
-			System.out.println("2. Odczytaj plik midi poprzez podanie nazwy pliku");
-			System.out.println("3. Poka¿ plik .mid");
-			System.out.println("4. Wyjdz");
+			System.out.println("...");
+			System.out.println("1. Create .mid file by giving a string");
+			System.out.println("2. Read .mid file to a string");
+			System.out.println("3. Show .mid file");
+			System.out.println("4. Exit");
 			i = reader.nextInt();
 			switch (i) {
 			case 1:
-				StringToMIDI.toMIDI();
+				stm.toMIDI();
 				break;
 			case 2:
-				StringToMIDI.toLine();
+				stm.toLine();
 				break;
 			case 3:
-				StringToMIDI.showMIDI();
+				stm.showMIDI();
 				break;
 			case 4:
 				System.exit(0);
 				break;
 			default:
-				System.out.println("B³êdny numer proszê zrestartowaæ program!");
+				System.out.println("No such number in the menu!");
 				break;
 			}
 
