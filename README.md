@@ -1,6 +1,6 @@
 # Text to fixed MIDI converter
 
-A pimple app that convert string to MIDI file and back.
+A simple app that convert string to MIDI file and back.
 
 ## Built With
 
