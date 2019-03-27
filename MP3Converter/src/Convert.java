@@ -9,10 +9,10 @@ public class Convert implements JMC {
 	public static void main(String[] args) {
 		do {
 			System.out.println("");
-			System.out.println("1. Stwórz plik MIDI poprzez podanie ci¹gu znaków");
-			System.out.println("2. Odczytaj plik midi poprzez podanie nazwy pliku");
-			System.out.println("3. Odczytaj plik .mid");
-			System.out.println("4. Wyjdz");
+			System.out.println("1. Create MIDI file by providing ");
+			System.out.println("2. PLACEHOLDER");
+			System.out.println("3. READ .mid file");
+			System.out.println("4. Exit");
 			i = reader.nextInt();
 			switch (i) {
 			case 1:
@@ -28,7 +28,7 @@ public class Convert implements JMC {
 				System.exit(0);
 				break;
 			default:
-				System.out.println("B³êdny numer proszê zrestartowaæ program!");
+				System.out.println("Error: Wrong number provided");
 				break;
 			}
 
